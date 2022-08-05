@@ -25,7 +25,7 @@ public class DragObject : MonoBehaviour
 
     //Boolean to activate/deactivate debugging for understanding code events
     [SerializeField] bool debuggingIsActive;
-
+    
     public void OnMouseDown()
     {
         mZCoord = Camera.main.WorldToScreenPoint(

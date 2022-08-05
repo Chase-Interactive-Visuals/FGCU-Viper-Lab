@@ -72,7 +72,7 @@ public class UIObjectController : MonoBehaviour
 
     public void InstantiatePrefabAndSetPositionRotation()
     {
-        GameObject myInstantiatedObject = Instantiate(cubePrefab, new Vector3(0, 10, 0), new Quaternion(0, 90, 0, 0));
+        GameObject myInstantiatedObject = Instantiate(cubePrefab, new Vector3(-10, 0, 0), new Quaternion(0, 90, 0, 0));
 
         currentInstantiatedPrefab = myInstantiatedObject;
     }
@@ -86,22 +86,22 @@ public class UIObjectController : MonoBehaviour
     public void MoveCurrentInstantiatedPrefabLeft()
     {
         if (currentInstantiatedPrefab != null)
-            currentInstantiatedPrefab.transform.Translate(Vector3.left * Time.deltaTime);
+            currentInstantiatedPrefab.transform.Translate(Vector3.left);
     }
     public void MoveCurrentInstantiatedPrefabRight()
     {
         if (currentInstantiatedPrefab != null)
-            currentInstantiatedPrefab.transform.Translate(Vector3.right * Time.deltaTime);
+            currentInstantiatedPrefab.transform.Translate(Vector3.right);
     }
     public void MoveCurrentInstantiatedPrefabUp()
     {
         if (currentInstantiatedPrefab != null)
-            currentInstantiatedPrefab.transform.Translate(Vector3.up * Time.deltaTime);
+            currentInstantiatedPrefab.transform.Translate(Vector3.up);
     }
     public void MoveCurrentInstantiatedPrefabDown()
     {
         if (currentInstantiatedPrefab != null)
-            currentInstantiatedPrefab.transform.Translate(Vector3.down * Time.deltaTime);
+            currentInstantiatedPrefab.transform.Translate(Vector3.down);
     }
     public void DestroyAllInstantiatedObjects()
     {

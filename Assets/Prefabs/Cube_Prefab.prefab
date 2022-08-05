@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 523533890169198514}
   - component: {fileID: 2082982209248785089}
   - component: {fileID: 7447286845498428659}
+  - component: {fileID: -2487275074616281261}
+  - component: {fileID: -8856082295869097504}
   m_Layer: 0
   m_Name: Cube_Prefab
   m_TagString: CubePrefab
@@ -83,3 +85,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-2487275074616281261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8060770350185790568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881d407dd7566b9439b4e5c84a9be2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: 0.5
+  snapToGrid: 0
+  activateXAxis: 1
+  activateYAxis: 0
+  activateZAxis: 1
+  debuggingIsActive: 0
+--- !u!65 &-8856082295869097504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8060770350185790568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

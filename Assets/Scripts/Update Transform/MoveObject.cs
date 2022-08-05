@@ -17,6 +17,13 @@ public class MoveObject : MonoBehaviour
     //Boolean to activate/deactivate debugging for understanding code events
     [SerializeField] bool debuggingIsActive;
 
+    Vector3 startPosition;
+    float triggerResetDistance = 15f;
+
+    private void Start()
+    {
+        startPosition = transform.position;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +33,15 @@ public class MoveObject : MonoBehaviour
         if (debuggingIsActive)
         {
             Debug.Log("\nObject Position: \n" + "X Axis: " + transform.position.x + "\nY Axis: " + transform.position.y + "\nZ Axis: " + transform.position.z);
+        }
+
+        if (Vector3.Distance(startPosition, transform.position) >= triggerResetDistance)
+        {
+            transform.position = startPosition;
+            if (debuggingIsActive)
+            {
+                Debug.Log("\nCube Move Position Reset to Starting Position");
+            }
         }
     }
 }
